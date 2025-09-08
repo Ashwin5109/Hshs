@@ -1,19 +1,177 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Share Food. Spread Smiles.</title>
+    <meta charset="UTF-8">
+    <title>Share Food. Spread Smiles. Save Lives.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background: radial-gradient(ellipse at 50% 0, #22424c 70%, #112022 100%);
+            color: #f8fafb;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            max-width: 450px;
+            margin: 2rem auto;
+            padding: 2rem 1rem;
+        }
+        .card {
+            background: linear-gradient(110deg, #183d3d 65%, #18403e 100%);
+            border-radius: 32px;
+            box-shadow: 0 4px 32px #183d3d99;
+            padding: 2.3rem 1.5rem 2.4rem 1.5rem;
+            margin-bottom: 2.3rem;
+            text-align: center;
+        }
+        .card img {
+            width: 110px;
+            margin-bottom: 1rem;
+        }
+        .card h2 {
+            font-size: 1.55rem;
+            margin: 0 0 1.7rem 0;
+            line-height: 2.1rem;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .btn {
+            border: none;
+            border-radius: 25px;
+            padding: 0.95em 1.7em;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 2px 12px #1b363399;
+        }
+        .btn-help {
+            color: #fff;
+            background: #19f581;
+            background: linear-gradient(90deg, #19f581 55%, #1fdb86 100%);
+        }
+        .btn-give {
+            color: #fff;
+            background: #fa953c;
+            background: linear-gradient(90deg, #fa953c 55%, #ffa858 100%);
+        }
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 2.7rem 0 1.3rem 0;
+            letter-spacing: 0.4px;
+            text-align: center;
+        }
+        .howitworks {
+            display: flex;
+            justify-content: center;
+            gap: 1.3rem;
+            margin-bottom: 2.5rem;
+        }
+        .how-step {
+            background: #234141da;
+            border-radius: 14px;
+            padding: 1.1em 1.4em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .how-step img {
+            width: 34px;
+            margin-bottom: 0.3em;
+        }
+        .how-step span {
+            font-weight: 500;
+            margin-bottom: 0.15em;
+        }
+        .how-step small {
+            color: #dbefff;
+            font-size: 0.97em;
+        }
+        .success-stories {
+            display: flex;
+            justify-content: center;
+            gap: 1.15rem;
+        }
+        .story-card {
+            width: 110px;
+            background: #20423eec;
+            border-radius: 14px;
+            padding: 1em 0.6em;
+            text-align: center;
+        }
+        .story-img {
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            margin: 0 auto 0.7em auto;
+            object-fit: cover;
+        }
+        .story-desc {
+            font-size: 1em;
+            margin: 0.4em 0;
+            color: #e7fcec;
+        }
+        @media (max-width: 600px) {
+            .howitworks, .success-stories {
+                flex-direction: column;
+                gap: 0.7rem;
+                align-items: center;
+            }
+            .container {
+                padding: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Share Food. Spread Smiles. Save Lives.</h1>
-    <button onclick="window.location.href='/register'">Register</button>
-    <button onclick="window.location.href='/post_help_request'">Post Help Request</button>
-    <button onclick="window.location.href='/get_help_requests'">View Requests</button>
-
-    <h2>Success Stories</h2>
-    <div>
-        <p>Helping a family in need</p>
-        <p>Feed a lonely senior</p>
-        <p>Provided meals to the homeless</p>
+    <div class="container">
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/basket-with-food.png" alt="Basket with Food"/>
+            <h2>Share Food. Spread Smiles. Save Lives.</h2>
+            <div class="buttons">
+                <button class="btn btn-help">I Need Help</button>
+                <button class="btn btn-give">I Want to Help</button>
+            </div>
+        </div>
+        <div class="section-title">How It Works</div>
+        <div class="howitworks">
+            <div class="how-step">
+                <img src="https://img.icons8.com/ios-filled/50/7cd0ad/add-user-group-man-man.png" alt="Register Icon"/>
+                <span>Register</span>
+                <small>Create your account</small>
+            </div>
+            <div class="how-step">
+                <img src="https://img.icons8.com/material-sharp/24/7cd0ad/speech-bubble--v1.png" alt="Help Request"/>
+                <span>Post Help Request</span>
+                <small>Let us know your need</small>
+            </div>
+            <div class="how-step">
+                <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/7cd0ad/external-location-navigation-kiranshastry-lineal-color-kiranshastry-1.png" alt="Connect"/>
+                <span>Connect &amp; Help</span>
+                <small>We bring people together</small>
+            </div>
+        </div>
+        <div class="section-title">Success Stories</div>
+        <div class="success-stories">
+            <div class="story-card">
+                <img class="story-img" src="https://img.icons8.com/ios-filled/50/ffffff/family--v1.png" alt="Family"/>
+                <div class="story-desc">Helping a family in need</div>
+            </div>
+            <div class="story-card">
+                <img class="story-img" src="https://img.icons8.com/ios-filled/50/ffffff/elderly-person.png" alt="Senior"/>
+                <div class="story-desc">Feed a lonely senior</div>
+            </div>
+            <div class="story-card">
+                <img class="story-img" src="https://img.icons8.com/ios-filled/50/ffffff/group-foreground-selected.png" alt="Homeless"/>
+                <div class="story-desc">Provided meals to the homeless</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
